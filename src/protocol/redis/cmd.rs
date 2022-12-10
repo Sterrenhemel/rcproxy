@@ -218,6 +218,34 @@ lazy_static! {
         hmap.insert(&b"TDIGEST.MERGE"[..], CmdType::Write);
         hmap.insert(&b"TDIGEST.RESET"[..], CmdType::Write);
         hmap.insert(&b"TDIGEST.TRIMMED_MEAN"[..], CmdType::Read);
+        // TairHash set
+        hmap.insert(&b"EXHSET"[..], CmdType::Write);
+        hmap.insert(&b"EXHMSET"[..], CmdType::Write);
+        hmap.insert(&b"EXHPEXPIREAT"[..], CmdType::Write);
+        hmap.insert(&b"EXHPEXPIRE"[..], CmdType::Write);
+        hmap.insert(&b"EXHEXPIREAT"[..], CmdType::Write);
+        hmap.insert(&b"EXHEXPIRE"[..], CmdType::Write);
+        hmap.insert(&b"EXHPERSIST"[..], CmdType::Write);
+        hmap.insert(&b"EXHSETVER"[..], CmdType::Write);
+        hmap.insert(&b"EXHINCRBY"[..], CmdType::Write);
+        hmap.insert(&b"EXHINCRBYFLOAT"[..], CmdType::Write);
+        hmap.insert(&b"EXHDEL"[..], CmdType::Write);
+        // get
+        hmap.insert(&b"EXHPTTL"[..], CmdType::Read);
+        hmap.insert(&b"EXHTTL"[..], CmdType::Read);
+        hmap.insert(&b"EXHVER"[..], CmdType::Read);
+        hmap.insert(&b"EXHMGET"[..], CmdType::Read);
+        hmap.insert(&b"EXHMGETWITHVER"[..], CmdType::Read);
+        hmap.insert(&b"EXHLEN"[..], CmdType::Read);
+        hmap.insert(&b"EXHEXISTS"[..], CmdType::Read);
+        hmap.insert(&b"EXHSTRLEN"[..], CmdType::Read);
+        hmap.insert(&b"EXHKEYS"[..], CmdType::Read);
+        hmap.insert(&b"EXHVALS"[..], CmdType::Read);
+        hmap.insert(&b"EXHGETALL"[..], CmdType::Read);
+        hmap.insert(&b"EXHGETALLWITHVER"[..], CmdType::Read);
+        hmap.insert(&b"EXHSCAN"[..], CmdType::Read);
+        hmap.insert(&b"EXHGET"[..], CmdType::Read);
+        hmap.insert(&b"EXHGETWITHVER"[..], CmdType::Read);
 
         hmap
     };
