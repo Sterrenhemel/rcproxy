@@ -247,6 +247,34 @@ lazy_static! {
         hmap.insert(&b"EXHGET"[..], CmdType::Read);
         hmap.insert(&b"EXHGETWITHVER"[..], CmdType::Read);
 
+        // alibaba tairHash
+        hmap.insert(&b"EXHSET"[..], CmdType::Write);
+        hmap.insert(&b"EXHGET"[..], CmdType::Read);
+        hmap.insert(&b"EXHMSET"[..], CmdType::Write);
+        hmap.insert(&b"EXHPEXPIREAT"[..], CmdType::Write);
+        hmap.insert(&b"EXHPEXPIRE"[..], CmdType::Write);
+        hmap.insert(&b"EXHEXPIREAT"[..], CmdType::Write);
+        hmap.insert(&b"EXHEXPIRE"[..], CmdType::Write);
+        hmap.insert(&b"EXHPERSIST"[..], CmdType::Write);
+        hmap.insert(&b"EXHPTTL"[..], CmdType::Read);
+        hmap.insert(&b"EXHTTL"[..], CmdType::Read);
+        hmap.insert(&b"EXHVER"[..], CmdType::Read);
+        hmap.insert(&b"EXHSETVER"[..], CmdType::Write);
+        hmap.insert(&b"EXHINCRBY"[..], CmdType::Write);
+        hmap.insert(&b"EXHINCRBYFLOAT"[..], CmdType::Write);
+        hmap.insert(&b"EXHGETWITHVER"[..], CmdType::Read);
+        hmap.insert(&b"EXHMGET"[..], CmdType::Read);
+        hmap.insert(&b"EXHMGETWITHVER"[..], CmdType::Read);
+        hmap.insert(&b"EXHDEL"[..], CmdType::Write);
+        hmap.insert(&b"EXHLEN"[..], CmdType::Read);
+        hmap.insert(&b"EXHEXISTS"[..], CmdType::Read);
+        hmap.insert(&b"EXHSTRLEN"[..], CmdType::Read);
+        hmap.insert(&b"EXHKEYS"[..], CmdType::Read);
+        hmap.insert(&b"EXHVALS"[..], CmdType::Read);
+        hmap.insert(&b"EXHGETALL"[..], CmdType::Read);
+        hmap.insert(&b"EXHGETALLWITHVER"[..], CmdType::Read);
+        hmap.insert(&b"EXHSCAN"[..], CmdType::Read);
+
         hmap
     };
 }
